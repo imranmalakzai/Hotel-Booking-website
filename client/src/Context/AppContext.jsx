@@ -12,12 +12,6 @@ const ContextProvider = ({children}) => {
   }
 
 
-
-
-
-
-
-
   return <AppContext value={values}>
     {children}
   </AppContext>

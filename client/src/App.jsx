@@ -13,6 +13,7 @@ import Dashboard from './Pages/HotelOwner/Dashboard.jsx'
 import AddRoom from './Pages/HotelOwner/AddRoom.jsx'
 import ListRoom from './Pages/HotelOwner/ListRoom.jsx'
 
+
 function App() {
 
   //checking the path
