@@ -1,7 +1,7 @@
 import { User } from "../models/user.model.js";
 import { Webhook } from "svix";
 import asyncHandler from "../utils/asyncHandler.js";
-import { CLERK_WEBHOOK_SECRET } from "../configs/env.confg.js";
+import { CLERK_WEBHOOK_SECRET } from "../configs/env.config.js";
 
 const clerkWebHooks = asyncHandler(async (req, res) => {
   const webhook = new Webhook(CLERK_WEBHOOK_SECRET);
@@ -13,7 +13,6 @@ const clerkWebHooks = asyncHandler(async (req, res) => {
   };
 
   await webhook.verify(JSON.stringify(req.body), headers);
-
   const { data, type } = req.body;
 
   const userData = {
