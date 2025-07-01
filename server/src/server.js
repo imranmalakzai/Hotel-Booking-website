@@ -52,6 +52,9 @@ const connectToDb = async () => {
   }
 };
 connectToDb();
+app.listen(PORT, () => {
+  console.log("server is running on https://localhost:" + PORT);
+});
 
 // Connect to Cloudinary
 connectCloudinary();

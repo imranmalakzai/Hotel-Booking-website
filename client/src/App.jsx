@@ -12,9 +12,12 @@ import Layout from './Pages/HotelOwner/Layout.jsx'
 import Dashboard from './Pages/HotelOwner/Dashboard.jsx'
 import AddRoom from './Pages/HotelOwner/AddRoom.jsx'
 import ListRoom from './Pages/HotelOwner/ListRoom.jsx'
+import { useContext } from 'react'
+import { AppContext } from './Context/AppContext.jsx'
 
 
 function App() {
+  const {showHotelReg} = useContext(AppContext)
 
   //checking the path
   const isOwnerPath = useLocation().pathname.includes("owner")
@@ -23,7 +26,7 @@ function App() {
   return (
     <div>
       {!isOwnerPath && (<Navbar />)}
-     {false && ( <HotelReg />)}
+     {showHotelReg && ( <HotelReg />)}
       <div className='min-h-[75vh]'>
       <Routes>
         <Route path='/' element={<Home />} />

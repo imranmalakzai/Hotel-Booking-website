@@ -4,7 +4,7 @@ import {
   createBooking,
   getUserBooking,
   getHotelBookings,
-} from "../models/booking.models.js";
+} from "../controllers/booking.controllers.js";
 import protectedRoute from "../middlewares/authMiddlewares.js";
 
 const bookingRouter = Router();
