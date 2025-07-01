@@ -1,3 +1,9 @@
+import { Hotel } from "../models/hotel.model.js";
+import { User } from "../models/user.model.js";
+import ApiError from "../utils/apiError.js";
+import asyncHandler from "../utils/asyncHandler.js";
+
+//** - - - - - - Hotel Registreation Controllers Section - - - - - - - -  */
 export const registerHotel = asyncHandler(async (req, res) => {
   const { name, address, contact, city } = req.body;
   const owner = req.user._id;
